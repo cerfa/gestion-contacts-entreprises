@@ -26,4 +26,4 @@ Furthermore, it allows to associate contacts to companies.
  genesis_gce_vim.postman_collection.json
 
 ## Note
-This rest web service can be improved in error management, Docker containerisation and others.
+This rest web service can be improved in error management, integration Test, Sonar for Quality tracking, Jacoco code coverage, Docker containerisation and others.
