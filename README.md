@@ -23,7 +23,8 @@ Furthermore, it allows to associate contacts to companies.
   H2 url: http://localhost:8116/gce/h2-console
 
 7_ You can also use the Postman collection, which you can find in the resources folder of the source code.
- genesis_gce_vim.postman_collection.json
+ genesis_gce_vim.postman_collection.json.
+
 
 ## Note
-This rest web service can be improved in error management, integration Test, Sonar for Quality tracking, Jacoco code coverage, Docker containerisation and others.
+This rest web service can be improved in error management, Docker containerisation and others.

@@ -5,6 +5,7 @@ import fenncim.genba.genesis.gce.dto.ContactDto;
 import fenncim.genba.genesis.gce.exception.ContactDataException;
 import fenncim.genba.genesis.gce.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,19 +35,19 @@ public class GestionContactsController {
     public ResponseEntity<List<ContactDto>> retrieveContacts() {
        return ResponseEntity.ok(this.contactService.retrieveALL());
     }
-    @PostMapping("/contact/create")
+    @PostMapping("/contact")
     public ResponseEntity<String> registerContact(@RequestBody ContactDto contactDto) throws ContactDataException {
        String result = this.contactService.saveContact(contactDto);
-       return ResponseEntity.accepted().body(result);
+       return ResponseEntity.status(HttpStatus.CREATED).body(result);
     }
 
-    @PutMapping("/contact/update")
+    @PutMapping("/contact")
     public ResponseEntity<String> updateContact(@RequestBody ContactDto contactDto) throws ContactDataException {
         String result = this.contactService.updateContact(contactDto);
         return ResponseEntity.accepted().body(result);
     }
 
-    @DeleteMapping("/contact/delete")
+    @DeleteMapping("/contact")
     public ResponseEntity<String> deleteContact(@RequestParam("nom") String nom, @RequestParam("prenom") String prenom) throws ContactDataException {
        String result = this.contactService.deleteContact(nom, prenom);
        if(CONTACT_NOT_FOUND.equals(result)) {

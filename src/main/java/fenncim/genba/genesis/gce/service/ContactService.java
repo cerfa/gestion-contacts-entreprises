@@ -1,19 +1,15 @@
 package fenncim.genba.genesis.gce.service;
 
 import fenncim.genba.genesis.gce.dto.ContactDto;
-import fenncim.genba.genesis.gce.entity.Adresse;
 import fenncim.genba.genesis.gce.entity.Contact;
-import fenncim.genba.genesis.gce.entity.repository.AdresseRepository;
 import fenncim.genba.genesis.gce.entity.repository.ContactRepository;
 import fenncim.genba.genesis.gce.exception.ContactDataException;
-import fenncim.genba.genesis.gce.mapper.AdresseMapper;
 import fenncim.genba.genesis.gce.mapper.ContactsMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -27,14 +23,11 @@ import static fenncim.genba.genesis.gce.util.Constants.UPDATE_CONTACT_ERROR;
 
 @Service
 public class ContactService {
-
     private final ContactRepository contactsRepository;
-    private final AdresseRepository adresseRepository;
 
     @Autowired
-    public ContactService(ContactRepository contactsRepository, AdresseRepository adresseRepository) {
+    public ContactService(ContactRepository contactsRepository) {
       this.contactsRepository = contactsRepository;
-      this.adresseRepository = adresseRepository;
     }
 
     public List<ContactDto> retrieveALL() {
@@ -54,6 +47,7 @@ public class ContactService {
         return CREATED;
     }
 
+    @Transactional
     public String updateContact(ContactDto contactDto) throws ContactDataException {
         try {
             Contact contact = retrieveContact(contactDto.nom(), contactDto.prenom());
@@ -78,6 +72,7 @@ public class ContactService {
         return UPDATED;
     }
 
+    @Transactional
     public String deleteContact(String nom, String prenom) throws ContactDataException {
         try {
              Contact contact = retrieveContact(nom, prenom);
