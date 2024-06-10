@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class GCEExceptionHandler {
     @ExceptionHandler({HttpMediaTypeNotAcceptableException.class, EnterpriseDataException.class,
             ContactDataException.class})
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<String> manageTargetsDataRetrievalException(Exception occuredException) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(occuredException.getMessage());
     }
