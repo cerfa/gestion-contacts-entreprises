@@ -32,52 +32,187 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://localhost:8116/gce/api/v1/entreprises/enterprise/253896567/find",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8116",
+					"path": [
+						"gce",
+						"api",
+						"v1",
+						"entreprises",
+						"enterprise",
+						"253896567",
+						"find"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "create_contact_employee",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nom\": \"FENNGENBA\",\r\n  \"prenom\": \"KAIZENCIM\",\r\n   \"contactType\": \"EMPLOYEE\",\r\n  \"adresse\": {\r\n    \"rue\": \"VALLA\",\r\n    \"numeroDeRue\": 15,\r\n    \"boite\": 25,\r\n    \"ville\": \"LOPPA\",\r\n    \"cap\": 20355\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8116/gce/api/v1/contacts/contact/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8116",
+					"path": [
+						"gce",
+						"api",
+						"v1",
+						"contacts",
+						"contact",
+						"create"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "create_contact_freelance_error",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nom\": \"FENNCIM\",\r\n  \"prenom\": \"KAIZEN\",\r\n   \"contactType\": \"FREELANCE\",\r\n  \"adresse\": {\r\n    \"rue\": \"KELLE\",\r\n    \"numeroDeRue\": 75,\r\n    \"boite\": 16,\r\n    \"ville\": \"WSP\",\r\n    \"cap\": 1150\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8116/gce/api/v1/contacts/contact/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8116",
+					"path": [
+						"gce",
+						"api",
+						"v1",
+						"contacts",
+						"contact",
+						"create"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "create_contact_freelance",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nom\": \"FENNCIM\",\r\n  \"prenom\": \"KAIZEN\",\r\n   \"contactType\": \"FREELANCE\",\r\n  \"adresse\": {\r\n    \"rue\": \"KELLE\",\r\n    \"numeroDeRue\": 75,\r\n    \"boite\": 16,\r\n    \"ville\": \"WSP\",\r\n    \"cap\": 1150\r\n  },\r\n    \"entreprises\": [\r\n{\r\n  \"tva\": \"253896567\",\r\n  \"denomination\": \"NEGESIS\",\r\n  \"adresseDto\": {\r\n    \"rue\": \"VENELLE\",\r\n    \"numeroDeRue\": 17,\r\n    \"boite\": 25,\r\n    \"ville\": \"WSP\",\r\n    \"cap\": 1150\r\n  }\r\n}\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8116/gce/api/v1/contacts/contact/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8116",
+					"path": [
+						"gce",
+						"api",
+						"v1",
+						"contacts",
+						"contact",
+						"create"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "create_enterprise",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tva\": \"253896567\",\r\n  \"denomination\": \"NEGESIS\",\r\n  \"adresseDto\": {\r\n    \"rue\": \"VENELLE\",\r\n    \"numeroDeRue\": 17,\r\n    \"boite\": 25,\r\n    \"ville\": \"WSP\",\r\n    \"cap\": 1150\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8116/gce/api/v1/entreprises/enterprise/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8116",
+					"path": [
+						"gce",
+						"api",
+						"v1",
+						"entreprises",
+						"enterprise",
+						"create"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "create_enterprise_1",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tva\": \"353896561\",\r\n  \"denomination\": \"VERSATILE\",\r\n  \"adresseDto\": {\r\n    \"rue\": \"HORIZON\",\r\n    \"numeroDeRue\": 12,\r\n    \"boite\": 25,\r\n    \"ville\": \"BRUGE\",\r\n    \"cap\": 2233\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8116/gce/api/v1/entreprises/enterprise",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8116",
+					"path": [
+						"gce",
+						"api",
+						"v1",
+						"entreprises",
+						"enterprise"
+					]
+				}
 			},
 			"response": []
 		},
@@ -86,25 +221,90 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://localhost:8116/gce/api/v1/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8116",
+					"path": [
+						"gce",
+						"api",
+						"v1",
+						"contacts"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "add_contact_to_enterprise",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nom\": \"FENNGENBA\",\r\n  \"prenom\": \"KAIZENCIM\",\r\n   \"contactType\": \"EMPLOYEE\",\r\n  \"adresse\": {\r\n    \"rue\": \"VALLA\",\r\n    \"numeroDeRue\": 15,\r\n    \"boite\": 25,\r\n    \"ville\": \"LOPPA\",\r\n    \"cap\": 20355\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8116/gce/api/v1/entreprises/enterprise/353896561/add/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8116",
+					"path": [
+						"gce",
+						"api",
+						"v1",
+						"entreprises",
+						"enterprise",
+						"353896561",
+						"add",
+						"contact"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "add_contact_to_enterprise_1",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nom\": \"FENNCIM\",\r\n  \"prenom\": \"KAIZEN\",\r\n   \"contactType\": \"FREELANCE\",\r\n  \"adresse\": {\r\n    \"rue\": \"KELLE\",\r\n    \"numeroDeRue\": 75,\r\n    \"boite\": 16,\r\n    \"ville\": \"WSP\",\r\n    \"cap\": 1150\r\n  },\r\n    \"entreprises\": [\r\n{\r\n  \"tva\": \"253896567\",\r\n  \"denomination\": \"NEGESIS\",\r\n  \"adresseDto\": {\r\n    \"rue\": \"VENELLE\",\r\n    \"numeroDeRue\": 17,\r\n    \"boite\": 25,\r\n    \"ville\": \"WSP\",\r\n    \"cap\": 1150\r\n  }\r\n}\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8116/gce/api/v1/entreprises/enterprise/353896561/add/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8116",
+					"path": [
+						"gce",
+						"api",
+						"v1",
+						"entreprises",
+						"enterprise",
+						"353896561",
+						"add",
+						"contact"
+					]
+				}
 			},
 			"response": []
 		}
