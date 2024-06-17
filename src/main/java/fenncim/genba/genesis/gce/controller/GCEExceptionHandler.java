@@ -17,4 +17,8 @@ public class GCEExceptionHandler {
     public ResponseEntity<String> manageTargetsDataRetrievalException(Exception occuredException) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(occuredException.getMessage());
     }
+    @ExceptionHandler({Exception.class})
+    public ResponseEntity<String> manageTargetsDataRetrievalGenericException(Exception occuredException) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(occuredException.getMessage());
+    }
  }
