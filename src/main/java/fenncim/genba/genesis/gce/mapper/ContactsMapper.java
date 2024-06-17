@@ -2,7 +2,6 @@ package fenncim.genba.genesis.gce.mapper;
 
 import fenncim.genba.genesis.gce.dto.ContactDto;
 import fenncim.genba.genesis.gce.entity.Contact;
-import org.springframework.beans.BeanUtils;
 
 import java.util.ArrayList;
 import java.util.List;

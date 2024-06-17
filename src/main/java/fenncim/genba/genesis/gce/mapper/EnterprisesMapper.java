@@ -1,12 +1,9 @@
 package fenncim.genba.genesis.gce.mapper;
 
-import fenncim.genba.genesis.gce.dto.ContactDto;
 import fenncim.genba.genesis.gce.dto.EntrepriseDto;
-import fenncim.genba.genesis.gce.entity.Contact;
 import fenncim.genba.genesis.gce.entity.Entreprise;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public final class EnterprisesMapper {
