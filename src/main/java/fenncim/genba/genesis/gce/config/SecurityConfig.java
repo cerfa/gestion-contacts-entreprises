@@ -39,7 +39,6 @@ public class SecurityConfig {
 
         return httpSecurity.build();
     }
-
     @Bean
     public UserDetailsService userDetailsService() {
         var inMemoryUserDetailsManager = new InMemoryUserDetailsManager();
