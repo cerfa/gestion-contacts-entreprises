@@ -1,7 +1,5 @@
 package fenncim.genba.genesis.gce.dto;
 
-import java.sql.Timestamp;
-
 import static fenncim.genba.genesis.gce.util.Constants.FIELD_MISSING_MESSAGE;
 
 public record AdresseDto(String rue, int numeroDeRue, int boite, String ville, int cap) {
