@@ -1,0 +1,9 @@
+FROM openjdk:21-jdk
+
+WORKDIR /app
+
+ADD target/gestion-contact-entreprise-1.0.0.jar /app
+
+ENTRYPOINT ["java"]
+
+CMD ["-jar" ,"gestion-contact-entreprise-1.0.0.jar"]
